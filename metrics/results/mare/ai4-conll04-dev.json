@@ -1,0 +1,551 @@
+{"id": "868", "relations": []}
+{"id": "5024", "relations": [{"head_entity": {"start": 38, "stop": 44}, "tail_entity": {"start": 54, "stop": 61}, "type": "Kill"}]}
+{"id": "663", "relations": [{"head_entity": {"start": 0, "stop": 13}, "tail_entity": {"start": 50, "stop": 69}, "type": "Work_For"}]}
+{"id": "1771", "relations": [{"head_entity": {"start": 34, "stop": 41}, "tail_entity": {"start": 44, "stop": 49}, "type": "Located_In"}]}
+{"id": "2217", "relations": []}
+{"id": "5421", "relations": [{"head_entity": {"start": 71, "stop": 83}, "tail_entity": {"start": 182, "stop": 191}, "type": "Live_In"}]}
+{"id": "1621", "relations": [{"head_entity": {"start": 28, "stop": 42}, "tail_entity": {"start": 45, "stop": 49}, "type": "Located_In"}]}
+{"id": "3248", "relations": []}
+{"id": "1211", "relations": []}
+{"id": "4500", "relations": []}
+{"id": "4137", "relations": []}
+{"id": "5713", "relations": []}
+{"id": "5643", "relations": []}
+{"id": "4552", "relations": []}
+{"id": "1563", "relations": [{"head_entity": {"start": 0, "stop": 7}, "tail_entity": {"start": 27, "stop": 41}, "type": "Work_For"}]}
+{"id": "5688", "relations": []}
+{"id": "5603", "relations": []}
+{"id": "4353", "relations": []}
+{"id": "1978", "relations": []}
+{"id": "3273", "relations": []}
+{"id": "5176", "relations": [{"head_entity": {"start": 121, "stop": 138}, "tail_entity": {"start": 210, "stop": 227}, "type": "Kill"}]}
+{"id": "4285", "relations": []}
+{"id": "5156", "relations": [{"head_entity": {"start": 24, "stop": 41}, "tail_entity": {"start": 86, "stop": 111}, "type": "Kill"}]}
+{"id": "4644", "relations": []}
+{"id": "1009", "relations": []}
+{"id": "1895", "relations": [{"head_entity": {"start": 0, "stop": 18}, "tail_entity": {"start": 125, "stop": 138}, "type": "Live_In"}]}
+{"id": "3271", "relations": []}
+{"id": "4650", "relations": []}
+{"id": "4258", "relations": []}
+{"id": "1224", "relations": []}
+{"id": "5490", "relations": []}
+{"id": "1876", "relations": []}
+{"id": "1023", "relations": []}
+{"id": "3004", "relations": []}
+{"id": "2827", "relations": []}
+{"id": "1549", "relations": []}
+{"id": "1739", "relations": [{"head_entity": {"start": 65, "stop": 80}, "tail_entity": {"start": 98, "stop": 109}, "type": "OrgBased_In"}]}
+{"id": "178", "relations": [{"head_entity": {"start": 0, "stop": 7}, "tail_entity": {"start": 10, "stop": 16}, "type": "Located_In"}]}
+{"id": "5384", "relations": [{"head_entity": {"start": 0, "stop": 7}, "tail_entity": {"start": 26, "stop": 34}, "type": "Live_In"}]}
+{"id": "3010", "relations": [{"head_entity": {"start": 9, "stop": 15}, "tail_entity": {"start": 0, "stop": 8}, "type": "OrgBased_In"}]}
+{"id": "678", "relations": []}
+{"id": "3759", "relations": []}
+{"id": "4198", "relations": []}
+{"id": "2615", "relations": []}
+{"id": "3217", "relations": []}
+{"id": "2894", "relations": []}
+{"id": "3467", "relations": []}
+{"id": "4545", "relations": []}
+{"id": "664", "relations": []}
+{"id": "631", "relations": []}
+{"id": "1600", "relations": []}
+{"id": "5321", "relations": [{"head_entity": {"start": 19, "stop": 37}, "tail_entity": {"start": 50, "stop": 62}, "type": "Live_In"}]}
+{"id": "536", "relations": []}
+{"id": "4270", "relations": []}
+{"id": "3999", "relations": []}
+{"id": "5372", "relations": [{"head_entity": {"start": 52, "stop": 67}, "tail_entity": {"start": 82, "stop": 95}, "type": "Live_In"}]}
+{"id": "1436", "relations": []}
+{"id": "2768", "relations": []}
+{"id": "4135", "relations": [{"head_entity": {"start": 9, "stop": 41}, "tail_entity": {"start": 0, "stop": 8}, "type": "OrgBased_In"}]}
+{"id": "4618", "relations": [{"head_entity": {"start": 26, "stop": 33}, "tail_entity": {"start": 109, "stop": 121}, "type": "Located_In"}]}
+{"id": "5417", "relations": [{"head_entity": {"start": 8, "stop": 23}, "tail_entity": {"start": 42, "stop": 53}, "type": "Live_In"}]}
+{"id": "3084", "relations": []}
+{"id": "3482", "relations": [{"head_entity": {"start": 0, "stop": 13}, "tail_entity": {"start": 49, "stop": 68}, "type": "Work_For"}]}
+{"id": "2267", "relations": []}
+{"id": "3216", "relations": []}
+{"id": "2136", "relations": []}
+{"id": "4390", "relations": [{"head_entity": {"start": 20, "stop": 41}, "tail_entity": {"start": 13, "stop": 19}, "type": "OrgBased_In"}]}
+{"id": "3289", "relations": []}
+{"id": "5796", "relations": [{"head_entity": {"start": 87, "stop": 99}, "tail_entity": {"start": 26, "stop": 58}, "type": "Work_For"}]}
+{"id": "1268", "relations": [{"head_entity": {"start": 13, "stop": 28}, "tail_entity": {"start": 0, "stop": 2}, "type": "Work_For"}]}
+{"id": "316", "relations": []}
+{"id": "5353", "relations": [{"head_entity": {"start": 52, "stop": 66}, "tail_entity": {"start": 81, "stop": 94}, "type": "Live_In"}]}
+{"id": "5578", "relations": []}
+{"id": "978", "relations": []}
+{"id": "837", "relations": []}
+{"id": "2048", "relations": [{"head_entity": {"start": 64, "stop": 86}, "tail_entity": {"start": 116, "stop": 124}, "type": "Live_In"}]}
+{"id": "3197", "relations": []}
+{"id": "3943", "relations": []}
+{"id": "1456", "relations": [{"head_entity": {"start": 93, "stop": 108}, "tail_entity": {"start": 112, "stop": 120}, "type": "Located_In"}]}
+{"id": "928", "relations": []}
+{"id": "3957", "relations": []}
+{"id": "5451", "relations": []}
+{"id": "4415", "relations": []}
+{"id": "1542", "relations": []}
+{"id": "74", "relations": []}
+{"id": "1539", "relations": []}
+{"id": "2139", "relations": [{"head_entity": {"start": 19, "stop": 32}, "tail_entity": {"start": 0, "stop": 11}, "type": "Work_For"}]}
+{"id": "1791", "relations": [{"head_entity": {"start": 64, "stop": 70}, "tail_entity": {"start": 86, "stop": 94}, "type": "Located_In"}]}
+{"id": "2803", "relations": []}
+{"id": "4089", "relations": []}
+{"id": "382", "relations": []}
+{"id": "2213", "relations": []}
+{"id": "3799", "relations": []}
+{"id": "2864", "relations": []}
+{"id": "4115", "relations": []}
+{"id": "5264", "relations": [{"head_entity": {"start": 32, "stop": 45}, "tail_entity": {"start": 58, "stop": 75}, "type": "Live_In"}]}
+{"id": "5395", "relations": [{"head_entity": {"start": 54, "stop": 77}, "tail_entity": {"start": 134, "stop": 144}, "type": "Live_In"}]}
+{"id": "2935", "relations": []}
+{"id": "2801", "relations": [{"head_entity": {"start": 4, "stop": 28}, "tail_entity": {"start": 68, "stop": 76}, "type": "OrgBased_In"}]}
+{"id": "523", "relations": []}
+{"id": "3392", "relations": [{"head_entity": {"start": 62, "stop": 80}, "tail_entity": {"start": 52, "stop": 61}, "type": "OrgBased_In"}]}
+{"id": "1402", "relations": [{"head_entity": {"start": 216, "stop": 227}, "tail_entity": {"start": 252, "stop": 279}, "type": "Work_For"}]}
+{"id": "5626", "relations": [{"head_entity": {"start": 0, "stop": 12}, "tail_entity": {"start": 95, "stop": 100}, "type": "Live_In"}]}
+{"id": "2692", "relations": []}
+{"id": "1599", "relations": []}
+{"id": "2346", "relations": []}
+{"id": "5639", "relations": []}
+{"id": "347", "relations": []}
+{"id": "3904", "relations": []}
+{"id": "2960", "relations": [{"head_entity": {"start": 47, "stop": 63}, "tail_entity": {"start": 116, "stop": 137}, "type": "Work_For"}]}
+{"id": "2494", "relations": []}
+{"id": "528", "relations": []}
+{"id": "1662", "relations": []}
+{"id": "5871", "relations": []}
+{"id": "2917", "relations": []}
+{"id": "4287", "relations": [{"head_entity": {"start": 115, "stop": 137}, "tail_entity": {"start": 104, "stop": 112}, "type": "Live_In"}]}
+{"id": "4025", "relations": []}
+{"id": "1327", "relations": []}
+{"id": "1489", "relations": []}
+{"id": "5589", "relations": []}
+{"id": "579", "relations": []}
+{"id": "2775", "relations": []}
+{"id": "2443", "relations": []}
+{"id": "333", "relations": [{"head_entity": {"start": 143, "stop": 154}, "tail_entity": {"start": 103, "stop": 132}, "type": "Work_For"}]}
+{"id": "1422", "relations": []}
+{"id": "615", "relations": [{"head_entity": {"start": 0, "stop": 9}, "tail_entity": {"start": 20, "stop": 25}, "type": "Work_For"}]}
+{"id": "3638", "relations": []}
+{"id": "2525", "relations": []}
+{"id": "3774", "relations": []}
+{"id": "5409", "relations": [{"head_entity": {"start": 0, "stop": 6}, "tail_entity": {"start": 12, "stop": 22}, "type": "Live_In"}, {"head_entity": {"start": 89, "stop": 113}, "tail_entity": {"start": 117, "stop": 121}, "type": "OrgBased_In"}]}
+{"id": "5484", "relations": [{"head_entity": {"start": 11, "stop": 16}, "tail_entity": {"start": 0, "stop": 7}, "type": "OrgBased_In"}]}
+{"id": "3550", "relations": []}
+{"id": "4352", "relations": []}
+{"id": "1083", "relations": []}
+{"id": "1220", "relations": []}
+{"id": "1640", "relations": [{"head_entity": {"start": 0, "stop": 19}, "tail_entity": {"start": 23, "stop": 30}, "type": "OrgBased_In"}]}
+{"id": "2835", "relations": []}
+{"id": "2342", "relations": []}
+{"id": "387", "relations": []}
+{"id": "1407", "relations": []}
+{"id": "269", "relations": [{"head_entity": {"start": 62, "stop": 66}, "tail_entity": {"start": 38, "stop": 42}, "type": "OrgBased_In"}]}
+{"id": "1427", "relations": []}
+{"id": "2708", "relations": []}
+{"id": "5157", "relations": [{"head_entity": {"start": 122, "stop": 133}, "tail_entity": {"start": 33, "stop": 47}, "type": "Kill"}]}
+{"id": "4448", "relations": [{"head_entity": {"start": 8, "stop": 11}, "tail_entity": {"start": 0, "stop": 7}, "type": "OrgBased_In"}]}
+{"id": "214", "relations": []}
+{"id": "2505", "relations": []}
+{"id": "2837", "relations": []}
+{"id": "1442", "relations": []}
+{"id": "3233", "relations": [{"head_entity": {"start": 6, "stop": 9}, "tail_entity": {"start": 0, "stop": 5}, "type": "OrgBased_In"}]}
+{"id": "4224", "relations": []}
+{"id": "1643", "relations": []}
+{"id": "1215", "relations": []}
+{"id": "3821", "relations": [{"head_entity": {"start": 6, "stop": 23}, "tail_entity": {"start": 0, "stop": 5}, "type": "OrgBased_In"}]}
+{"id": "1584", "relations": []}
+{"id": "1547", "relations": []}
+{"id": "650", "relations": [{"head_entity": {"start": 0, "stop": 12}, "tail_entity": {"start": 15, "stop": 27}, "type": "Located_In"}]}
+{"id": "2554", "relations": []}
+{"id": "2198", "relations": []}
+{"id": "2203", "relations": []}
+{"id": "5836", "relations": []}
+{"id": "1850", "relations": [{"head_entity": {"start": 84, "stop": 95}, "tail_entity": {"start": 22, "stop": 27}, "type": "Located_In"}]}
+{"id": "2955", "relations": []}
+{"id": "1065", "relations": []}
+{"id": "5327", "relations": [{"head_entity": {"start": 55, "stop": 69}, "tail_entity": {"start": 84, "stop": 97}, "type": "Live_In"}]}
+{"id": "757", "relations": []}
+{"id": "2703", "relations": []}
+{"id": "5281", "relations": [{"head_entity": {"start": 0, "stop": 6}, "tail_entity": {"start": 21, "stop": 39}, "type": "Live_In"}]}
+{"id": "345", "relations": []}
+{"id": "2982", "relations": []}
+{"id": "4085", "relations": []}
+{"id": "1463", "relations": []}
+{"id": "3491", "relations": []}
+{"id": "3744", "relations": []}
+{"id": "3383", "relations": []}
+{"id": "423", "relations": [{"head_entity": {"start": 138, "stop": 152}, "tail_entity": {"start": 74, "stop": 80}, "type": "Work_For"}]}
+{"id": "1902", "relations": []}
+{"id": "253", "relations": []}
+{"id": "3984", "relations": []}
+{"id": "5773", "relations": []}
+{"id": "4375", "relations": []}
+{"id": "2005", "relations": [{"head_entity": {"start": 36, "stop": 55}, "tail_entity": {"start": 0, "stop": 25}, "type": "Work_For"}]}
+{"id": "5571", "relations": []}
+{"id": "1373", "relations": []}
+{"id": "822", "relations": []}
+{"id": "2726", "relations": []}
+{"id": "2398", "relations": []}
+{"id": "3379", "relations": []}
+{"id": "3785", "relations": []}
+{"id": "1899", "relations": [{"head_entity": {"start": 26, "stop": 37}, "tail_entity": {"start": 12, "stop": 15}, "type": "Work_For"}, {"head_entity": {"start": 41, "stop": 52}, "tail_entity": {"start": 55, "stop": 59}, "type": "Located_In"}]}
+{"id": "168", "relations": []}
+{"id": "3731", "relations": []}
+{"id": "3085", "relations": [{"head_entity": {"start": 38, "stop": 43}, "tail_entity": {"start": 73, "stop": 78}, "type": "Located_In"}]}
+{"id": "3304", "relations": [{"head_entity": {"start": 7, "stop": 20}, "tail_entity": {"start": 0, "stop": 6}, "type": "OrgBased_In"}]}
+{"id": "3970", "relations": []}
+{"id": "2327", "relations": [{"head_entity": {"start": 16, "stop": 29}, "tail_entity": {"start": 0, "stop": 5}, "type": "Work_For"}]}
+{"id": "2434", "relations": []}
+{"id": "1952", "relations": [{"head_entity": {"start": 114, "stop": 130}, "tail_entity": {"start": 4, "stop": 15}, "type": "Work_For"}]}
+{"id": "1631", "relations": [{"head_entity": {"start": 106, "stop": 121}, "tail_entity": {"start": 70, "stop": 81}, "type": "Work_For"}]}
+{"id": "2133", "relations": []}
+{"id": "2490", "relations": []}
+{"id": "5058", "relations": [{"head_entity": {"start": 92, "stop": 98}, "tail_entity": {"start": 225, "stop": 232}, "type": "Kill"}]}
+{"id": "369", "relations": []}
+{"id": "5536", "relations": [{"head_entity": {"start": 22, "stop": 43}, "tail_entity": {"start": 47, "stop": 53}, "type": "Located_In"}]}
+{"id": "4065", "relations": []}
+{"id": "4156", "relations": []}
+{"id": "5043", "relations": [{"head_entity": {"start": 73, "stop": 90}, "tail_entity": {"start": 45, "stop": 70}, "type": "Kill"}]}
+{"id": "314", "relations": []}
+{"id": "1232", "relations": []}
+{"id": "5333", "relations": [{"head_entity": {"start": 0, "stop": 12}, "tail_entity": {"start": 50, "stop": 58}, "type": "Live_In"}]}
+{"id": "5122", "relations": [{"head_entity": {"start": 0, "stop": 14}, "tail_entity": {"start": 83, "stop": 105}, "type": "Kill"}]}
+{"id": "233", "relations": []}
+{"id": "154", "relations": []}
+{"id": "1908", "relations": []}
+{"id": "1948", "relations": []}
+{"id": "1328", "relations": []}
+{"id": "4575", "relations": []}
+{"id": "2135", "relations": []}
+{"id": "1498", "relations": []}
+{"id": "230", "relations": []}
+{"id": "5437", "relations": [{"head_entity": {"start": 183, "stop": 194}, "tail_entity": {"start": 66, "stop": 78}, "type": "Work_For"}]}
+{"id": "1182", "relations": []}
+{"id": "4398", "relations": [{"head_entity": {"start": 7, "stop": 10}, "tail_entity": {"start": 0, "stop": 6}, "type": "OrgBased_In"}]}
+{"id": "1297", "relations": []}
+{"id": "2643", "relations": [{"head_entity": {"start": 25, "stop": 27}, "tail_entity": {"start": 10, "stop": 18}, "type": "OrgBased_In"}]}
+{"id": "1868", "relations": []}
+{"id": "5351", "relations": [{"head_entity": {"start": 52, "stop": 72}, "tail_entity": {"start": 87, "stop": 96}, "type": "Live_In"}]}
+{"id": "279", "relations": []}
+{"id": "1858", "relations": [{"head_entity": {"start": 114, "stop": 125}, "tail_entity": {"start": 133, "stop": 148}, "type": "Work_For"}]}
+{"id": "618", "relations": []}
+{"id": "4510", "relations": []}
+{"id": "5464", "relations": []}
+{"id": "4039", "relations": []}
+{"id": "5044", "relations": [{"head_entity": {"start": 75, "stop": 93}, "tail_entity": {"start": 0, "stop": 6}, "type": "Kill"}]}
+{"id": "2704", "relations": [{"head_entity": {"start": 10, "stop": 25}, "tail_entity": {"start": 41, "stop": 71}, "type": "Work_For"}]}
+{"id": "3739", "relations": []}
+{"id": "3862", "relations": []}
+{"id": "4109", "relations": []}
+{"id": "1508", "relations": []}
+{"id": "5665", "relations": []}
+{"id": "5763", "relations": [{"head_entity": {"start": 23, "stop": 29}, "tail_entity": {"start": 0, "stop": 10}, "type": "Live_In"}]}
+{"id": "1478", "relations": []}
+{"id": "1673", "relations": []}
+{"id": "2153", "relations": []}
+{"id": "1256", "relations": []}
+{"id": "5515", "relations": []}
+{"id": "1992", "relations": []}
+{"id": "1266", "relations": [{"head_entity": {"start": 126, "stop": 141}, "tail_entity": {"start": 113, "stop": 115}, "type": "Work_For"}]}
+{"id": "5480", "relations": [{"head_entity": {"start": 125, "stop": 143}, "tail_entity": {"start": 187, "stop": 195}, "type": "Live_In"}]}
+{"id": "2919", "relations": [{"head_entity": {"start": 12, "stop": 22}, "tail_entity": {"start": 0, "stop": 11}, "type": "OrgBased_In"}]}
+{"id": "1645", "relations": []}
+{"id": "5118", "relations": [{"head_entity": {"start": 0, "stop": 7}, "tail_entity": {"start": 85, "stop": 92}, "type": "Kill"}]}
+{"id": "625", "relations": []}
+{"id": "1434", "relations": []}
+{"id": "2785", "relations": [{"head_entity": {"start": 0, "stop": 14}, "tail_entity": {"start": 34, "stop": 58}, "type": "Work_For"}]}
+{"id": "5177", "relations": []}
+{"id": "2838", "relations": [{"head_entity": {"start": 0, "stop": 16}, "tail_entity": {"start": 31, "stop": 44}, "type": "Work_For"}]}
+{"id": "2598", "relations": [{"head_entity": {"start": 0, "stop": 14}, "tail_entity": {"start": 27, "stop": 37}, "type": "Work_For"}]}
+{"id": "4491", "relations": [{"head_entity": {"start": 96, "stop": 138}, "tail_entity": {"start": 96, "stop": 120}, "type": "Work_For"}]}
+{"id": "644", "relations": []}
+{"id": "5015", "relations": [{"head_entity": {"start": 99, "stop": 120}, "tail_entity": {"start": 20, "stop": 27}, "type": "Kill"}]}
+{"id": "3631", "relations": []}
+{"id": "5175", "relations": [{"head_entity": {"start": 92, "stop": 110}, "tail_entity": {"start": 60, "stop": 89}, "type": "Work_For"}, {"head_entity": {"start": 175, "stop": 192}, "tail_entity": {"start": 236, "stop": 258}, "type": "Kill"}]}
+{"id": "918", "relations": []}
+{"id": "3639", "relations": [{"head_entity": {"start": 8, "stop": 20}, "tail_entity": {"start": 0, "stop": 7}, "type": "OrgBased_In"}]}
+{"id": "5011", "relations": [{"head_entity": {"start": 0, "stop": 24}, "tail_entity": {"start": 145, "stop": 152}, "type": "Kill"}]}
+{"id": "3021", "relations": [{"head_entity": {"start": 65, "stop": 91}, "tail_entity": {"start": 60, "stop": 64}, "type": "OrgBased_In"}]}
+{"id": "3831", "relations": []}
+{"id": "1464", "relations": []}
+{"id": "2717", "relations": []}
+{"id": "170", "relations": []}
+{"id": "3380", "relations": []}
+{"id": "4456", "relations": []}
+{"id": "4219", "relations": [{"head_entity": {"start": 5, "stop": 13}, "tail_entity": {"start": 0, "stop": 4}, "type": "OrgBased_In"}]}
+{"id": "3483", "relations": []}
+{"id": "3375", "relations": []}
+{"id": "3578", "relations": []}
+{"id": "2621", "relations": []}
+{"id": "637", "relations": []}
+{"id": "5225", "relations": [{"head_entity": {"start": 14, "stop": 20}, "tail_entity": {"start": 68, "stop": 75}, "type": "Kill"}]}
+{"id": "153", "relations": []}
+{"id": "3635", "relations": []}
+{"id": "346", "relations": []}
+{"id": "3313", "relations": []}
+{"id": "590", "relations": []}
+{"id": "2958", "relations": [{"head_entity": {"start": 139, "stop": 167}, "tail_entity": {"start": 116, "stop": 122}, "type": "OrgBased_In"}]}
+{"id": "4160", "relations": []}
+{"id": "5049", "relations": [{"head_entity": {"start": 51, "stop": 64}, "tail_entity": {"start": 10, "stop": 36}, "type": "Kill"}]}
+{"id": "3173", "relations": []}
+{"id": "1109", "relations": []}
+{"id": "1496", "relations": []}
+{"id": "3589", "relations": []}
+{"id": "4136", "relations": []}
+{"id": "63", "relations": []}
+{"id": "5614", "relations": []}
+{"id": "4435", "relations": []}
+{"id": "2428", "relations": []}
+{"id": "2150", "relations": []}
+{"id": "1181", "relations": []}
+{"id": "1787", "relations": []}
+{"id": "2526", "relations": []}
+{"id": "1731", "relations": []}
+{"id": "62", "relations": []}
+{"id": "448", "relations": []}
+{"id": "3298", "relations": [{"head_entity": {"start": 0, "stop": 17}, "tail_entity": {"start": 110, "stop": 117}, "type": "Live_In"}, {"head_entity": {"start": 40, "stop": 50}, "tail_entity": {"start": 64, "stop": 71}, "type": "Located_In"}]}
+{"id": "5757", "relations": [{"head_entity": {"start": 0, "stop": 10}, "tail_entity": {"start": 17, "stop": 26}, "type": "Live_In"}]}
+{"id": "5136", "relations": [{"head_entity": {"start": 0, "stop": 16}, "tail_entity": {"start": 34, "stop": 41}, "type": "Kill"}]}
+{"id": "2583", "relations": []}
+{"id": "5640", "relations": []}
+{"id": "2377", "relations": [{"head_entity": {"start": 51, "stop": 59}, "tail_entity": {"start": 126, "stop": 132}, "type": "Located_In"}]}
+{"id": "959", "relations": [{"head_entity": {"start": 0, "stop": 9}, "tail_entity": {"start": 20, "stop": 25}, "type": "Work_For"}]}
+{"id": "5422", "relations": [{"head_entity": {"start": 76, "stop": 84}, "tail_entity": {"start": 87, "stop": 92}, "type": "Located_In"}]}
+{"id": "5560", "relations": []}
+{"id": "983", "relations": []}
+{"id": "1822", "relations": []}
+{"id": "2294", "relations": []}
+{"id": "3454", "relations": []}
+{"id": "4647", "relations": []}
+{"id": "5311", "relations": [{"head_entity": {"start": 52, "stop": 68}, "tail_entity": {"start": 83, "stop": 100}, "type": "Live_In"}]}
+{"id": "3535", "relations": []}
+{"id": "3691", "relations": []}
+{"id": "2286", "relations": []}
+{"id": "668", "relations": []}
+{"id": "407", "relations": []}
+{"id": "4254", "relations": []}
+{"id": "1331", "relations": [{"head_entity": {"start": 0, "stop": 17}, "tail_entity": {"start": 96, "stop": 109}, "type": "Live_In"}]}
+{"id": "430", "relations": []}
+{"id": "695", "relations": []}
+{"id": "4536", "relations": []}
+{"id": "2609", "relations": []}
+{"id": "3090", "relations": []}
+{"id": "5624", "relations": []}
+{"id": "2849", "relations": []}
+{"id": "4328", "relations": []}
+{"id": "3501", "relations": []}
+{"id": "3140", "relations": []}
+{"id": "1819", "relations": []}
+{"id": "802", "relations": []}
+{"id": "251", "relations": []}
+{"id": "1219", "relations": []}
+{"id": "570", "relations": []}
+{"id": "3345", "relations": []}
+{"id": "1230", "relations": []}
+{"id": "5262", "relations": [{"head_entity": {"start": 0, "stop": 7}, "tail_entity": {"start": 22, "stop": 30}, "type": "Live_In"}]}
+{"id": "50", "relations": [{"head_entity": {"start": 35, "stop": 50}, "tail_entity": {"start": 2, "stop": 7}, "type": "Live_In"}]}
+{"id": "2932", "relations": []}
+{"id": "2840", "relations": []}
+{"id": "2588", "relations": []}
+{"id": "2295", "relations": []}
+{"id": "1534", "relations": []}
+{"id": "4538", "relations": []}
+{"id": "2247", "relations": []}
+{"id": "215", "relations": []}
+{"id": "3577", "relations": []}
+{"id": "1909", "relations": []}
+{"id": "5608", "relations": []}
+{"id": "992", "relations": []}
+{"id": "3070", "relations": []}
+{"id": "2925", "relations": []}
+{"id": "937", "relations": []}
+{"id": "1894", "relations": []}
+{"id": "4012", "relations": []}
+{"id": "1324", "relations": []}
+{"id": "1799", "relations": []}
+{"id": "4218", "relations": [{"head_entity": {"start": 18, "stop": 26}, "tail_entity": {"start": 13, "stop": 17}, "type": "OrgBased_In"}]}
+{"id": "5565", "relations": []}
+{"id": "2937", "relations": []}
+{"id": "2616", "relations": []}
+{"id": "4511", "relations": []}
+{"id": "421", "relations": []}
+{"id": "3526", "relations": []}
+{"id": "2953", "relations": []}
+{"id": "4592", "relations": []}
+{"id": "1052", "relations": []}
+{"id": "2757", "relations": []}
+{"id": "491", "relations": []}
+{"id": "1116", "relations": []}
+{"id": "3111", "relations": []}
+{"id": "842", "relations": []}
+{"id": "3599", "relations": []}
+{"id": "4629", "relations": []}
+{"id": "699", "relations": []}
+{"id": "5027", "relations": [{"head_entity": {"start": 27, "stop": 40}, "tail_entity": {"start": 0, "stop": 14}, "type": "Kill"}]}
+{"id": "549", "relations": []}
+{"id": "3947", "relations": []}
+{"id": "1307", "relations": []}
+{"id": "3125", "relations": []}
+{"id": "2145", "relations": []}
+{"id": "5299", "relations": [{"head_entity": {"start": 5, "stop": 9}, "tail_entity": {"start": 35, "stop": 48}, "type": "Live_In"}]}
+{"id": "3558", "relations": []}
+{"id": "2617", "relations": []}
+{"id": "829", "relations": []}
+{"id": "3469", "relations": []}
+{"id": "3327", "relations": [{"head_entity": {"start": 68, "stop": 71}, "tail_entity": {"start": 58, "stop": 67}, "type": "OrgBased_In"}]}
+{"id": "3777", "relations": []}
+{"id": "2833", "relations": [{"head_entity": {"start": 0, "stop": 14}, "tail_entity": {"start": 25, "stop": 34}, "type": "OrgBased_In"}]}
+{"id": "3451", "relations": []}
+{"id": "1928", "relations": []}
+{"id": "3761", "relations": []}
+{"id": "3585", "relations": []}
+{"id": "1818", "relations": []}
+{"id": "5263", "relations": [{"head_entity": {"start": 52, "stop": 62}, "tail_entity": {"start": 77, "stop": 101}, "type": "Live_In"}]}
+{"id": "5093", "relations": [{"head_entity": {"start": 22, "stop": 43}, "tail_entity": {"start": 0, "stop": 7}, "type": "Kill"}]}
+{"id": "3586", "relations": []}
+{"id": "4203", "relations": [{"head_entity": {"start": 18, "stop": 36}, "tail_entity": {"start": 13, "stop": 17}, "type": "OrgBased_In"}]}
+{"id": "4418", "relations": []}
+{"id": "2472", "relations": []}
+{"id": "3179", "relations": []}
+{"id": "2720", "relations": []}
+{"id": "2309", "relations": []}
+{"id": "1084", "relations": []}
+{"id": "538", "relations": []}
+{"id": "1272", "relations": [{"head_entity": {"start": 14, "stop": 25}, "tail_entity": {"start": 0, "stop": 3}, "type": "Work_For"}]}
+{"id": "2695", "relations": [{"head_entity": {"start": 64, "stop": 70}, "tail_entity": {"start": 99, "stop": 105}, "type": "Located_In"}]}
+{"id": "661", "relations": [{"head_entity": {"start": 0, "stop": 9}, "tail_entity": {"start": 12, "stop": 17}, "type": "Located_In"}]}
+{"id": "602", "relations": []}
+{"id": "3695", "relations": []}
+{"id": "4078", "relations": []}
+{"id": "935", "relations": []}
+{"id": "3554", "relations": []}
+{"id": "3352", "relations": []}
+{"id": "3985", "relations": []}
+{"id": "498", "relations": []}
+{"id": "255", "relations": []}
+{"id": "3814", "relations": []}
+{"id": "5242", "relations": [{"head_entity": {"start": 26, "stop": 31}, "tail_entity": {"start": 155, "stop": 167}, "type": "Kill"}]}
+{"id": "4333", "relations": [{"head_entity": {"start": 38, "stop": 44}, "tail_entity": {"start": 17, "stop": 22}, "type": "OrgBased_In"}]}
+{"id": "5880", "relations": [{"head_entity": {"start": 0, "stop": 15}, "tail_entity": {"start": 77, "stop": 90}, "type": "Work_For"}]}
+{"id": "1871", "relations": [{"head_entity": {"start": 81, "stop": 97}, "tail_entity": {"start": 59, "stop": 70}, "type": "Live_In"}]}
+{"id": "4189", "relations": [{"head_entity": {"start": 7, "stop": 26}, "tail_entity": {"start": 0, "stop": 6}, "type": "OrgBased_In"}]}
+{"id": "3764", "relations": [{"head_entity": {"start": 52, "stop": 60}, "tail_entity": {"start": 44, "stop": 51}, "type": "OrgBased_In"}]}
+{"id": "944", "relations": []}
+{"id": "4266", "relations": [{"head_entity": {"start": 13, "stop": 17}, "tail_entity": {"start": 0, "stop": 12}, "type": "OrgBased_In"}]}
+{"id": "5807", "relations": []}
+{"id": "3734", "relations": []}
+{"id": "3963", "relations": []}
+{"id": "5794", "relations": []}
+{"id": "982", "relations": []}
+{"id": "3510", "relations": []}
+{"id": "1089", "relations": [{"head_entity": {"start": 41, "stop": 50}, "tail_entity": {"start": 79, "stop": 92}, "type": "Located_In"}]}
+{"id": "429", "relations": [{"head_entity": {"start": 135, "stop": 148}, "tail_entity": {"start": 167, "stop": 196}, "type": "Work_For"}]}
+{"id": "2230", "relations": []}
+{"id": "1484", "relations": [{"head_entity": {"start": 208, "stop": 223}, "tail_entity": {"start": 231, "stop": 257}, "type": "Work_For"}]}
+{"id": "129", "relations": [{"head_entity": {"start": 159, "stop": 182}, "tail_entity": {"start": 185, "stop": 191}, "type": "Located_In"}]}
+{"id": "2709", "relations": []}
+{"id": "5702", "relations": []}
+{"id": "2991", "relations": [{"head_entity": {"start": 7, "stop": 25}, "tail_entity": {"start": 0, "stop": 6}, "type": "OrgBased_In"}]}
+{"id": "121", "relations": []}
+{"id": "1136", "relations": []}
+{"id": "5041", "relations": [{"head_entity": {"start": 96, "stop": 113}, "tail_entity": {"start": 147, "stop": 172}, "type": "Kill"}]}
+{"id": "951", "relations": []}
+{"id": "1486", "relations": [{"head_entity": {"start": 27, "stop": 38}, "tail_entity": {"start": 55, "stop": 61}, "type": "Located_In"}]}
+{"id": "4481", "relations": []}
+{"id": "1115", "relations": []}
+{"id": "1242", "relations": []}
+{"id": "5359", "relations": [{"head_entity": {"start": 17, "stop": 32}, "tail_entity": {"start": 45, "stop": 51}, "type": "Live_In"}]}
+{"id": "23", "relations": [{"head_entity": {"start": 0, "stop": 7}, "tail_entity": {"start": 10, "stop": 15}, "type": "Located_In"}]}
+{"id": "5388", "relations": [{"head_entity": {"start": 25, "stop": 36}, "tail_entity": {"start": 49, "stop": 55}, "type": "Live_In"}]}
+{"id": "4556", "relations": []}
+{"id": "1965", "relations": [{"head_entity": {"start": 18, "stop": 31}, "tail_entity": {"start": 0, "stop": 11}, "type": "Live_In"}]}
+{"id": "1826", "relations": []}
+{"id": "1754", "relations": []}
+{"id": "5273", "relations": []}
+{"id": "1738", "relations": []}
+{"id": "1082", "relations": []}
+{"id": "2052", "relations": []}
+{"id": "5542", "relations": []}
+{"id": "5661", "relations": []}
+{"id": "174", "relations": []}
+{"id": "5199", "relations": [{"head_entity": {"start": 62, "stop": 75}, "tail_entity": {"start": 30, "stop": 47}, "type": "Kill"}]}
+{"id": "801", "relations": []}
+{"id": "4444", "relations": [{"head_entity": {"start": 231, "stop": 240}, "tail_entity": {"start": 261, "stop": 291}, "type": "Work_For"}]}
+{"id": "1051", "relations": []}
+{"id": "1611", "relations": []}
+{"id": "2317", "relations": []}
+{"id": "3322", "relations": [{"head_entity": {"start": 17, "stop": 27}, "tail_entity": {"start": 30, "stop": 41}, "type": "Located_In"}]}
+{"id": "5680", "relations": []}
+{"id": "2995", "relations": [{"head_entity": {"start": 50, "stop": 62}, "tail_entity": {"start": 0, "stop": 3}, "type": "Work_For"}]}
+{"id": "3068", "relations": []}
+{"id": "864", "relations": []}
+{"id": "3028", "relations": []}
+{"id": "1991", "relations": []}
+{"id": "3704", "relations": [{"head_entity": {"start": 7, "stop": 29}, "tail_entity": {"start": 0, "stop": 6}, "type": "OrgBased_In"}]}
+{"id": "3694", "relations": []}
+{"id": "1836", "relations": []}
+{"id": "5235", "relations": [{"head_entity": {"start": 217, "stop": 223}, "tail_entity": {"start": 48, "stop": 55}, "type": "Kill"}]}
+{"id": "268", "relations": [{"head_entity": {"start": 118, "stop": 122}, "tail_entity": {"start": 113, "stop": 117}, "type": "OrgBased_In"}]}
+{"id": "2348", "relations": [{"head_entity": {"start": 72, "stop": 92}, "tail_entity": {"start": 55, "stop": 61}, "type": "Live_In"}]}
+{"id": "3405", "relations": []}
+{"id": "4070", "relations": []}
+{"id": "862", "relations": [{"head_entity": {"start": 35, "stop": 41}, "tail_entity": {"start": 44, "stop": 49}, "type": "Located_In"}, {"head_entity": {"start": 59, "stop": 73}, "tail_entity": {"start": 77, "stop": 86}, "type": "OrgBased_In"}]}
+{"id": "5338", "relations": [{"head_entity": {"start": 0, "stop": 20}, "tail_entity": {"start": 77, "stop": 95}, "type": "Live_In"}]}
+{"id": "1322", "relations": [{"head_entity": {"start": 0, "stop": 17}, "tail_entity": {"start": 39, "stop": 64}, "type": "Work_For"}]}
+{"id": "3495", "relations": []}
+{"id": "3098", "relations": []}
+{"id": "5776", "relations": []}
+{"id": "3244", "relations": []}
+{"id": "5795", "relations": []}
+{"id": "4548", "relations": []}
+{"id": "847", "relations": []}
+{"id": "1002", "relations": [{"head_entity": {"start": 150, "stop": 195}, "tail_entity": {"start": 57, "stop": 61}, "type": "OrgBased_In"}]}
+{"id": "4097", "relations": []}
+{"id": "2550", "relations": []}
+{"id": "304", "relations": []}
+{"id": "371", "relations": []}
+{"id": "1202", "relations": [{"head_entity": {"start": 13, "stop": 28}, "tail_entity": {"start": 0, "stop": 9}, "type": "Live_In"}]}
+{"id": "1006", "relations": [{"head_entity": {"start": 71, "stop": 78}, "tail_entity": {"start": 81, "stop": 90}, "type": "Located_In"}]}
+{"id": "3406", "relations": []}
+{"id": "2532", "relations": []}
+{"id": "3865", "relations": []}
+{"id": "517", "relations": [{"head_entity": {"start": 76, "stop": 85}, "tail_entity": {"start": 88, "stop": 92}, "type": "Located_In"}]}
+{"id": "1870", "relations": []}
+{"id": "2744", "relations": []}
+{"id": "205", "relations": []}
+{"id": "3924", "relations": []}
+{"id": "1972", "relations": []}
+{"id": "938", "relations": []}
+{"id": "3102", "relations": []}
+{"id": "3180", "relations": []}
+{"id": "2204", "relations": []}
+{"id": "3078", "relations": []}
+{"id": "5012", "relations": [{"head_entity": {"start": 32, "stop": 38}, "tail_entity": {"start": 173, "stop": 180}, "type": "Kill"}]}
+{"id": "1063", "relations": [{"head_entity": {"start": 76, "stop": 89}, "tail_entity": {"start": 60, "stop": 65}, "type": "Work_For"}]}
+{"id": "5563", "relations": []}
+{"id": "114", "relations": []}
+{"id": "3293", "relations": []}
+{"id": "790", "relations": []}
+{"id": "3054", "relations": []}
+{"id": "3316", "relations": []}
+{"id": "5103", "relations": [{"head_entity": {"start": 10, "stop": 24}, "tail_entity": {"start": 49, "stop": 75}, "type": "Kill"}]}
+{"id": "1210", "relations": [{"head_entity": {"start": 95, "stop": 107}, "tail_entity": {"start": 57, "stop": 66}, "type": "Live_In"}]}
+{"id": "5769", "relations": []}
+{"id": "3898", "relations": []}
+{"id": "994", "relations": []}
+{"id": "2831", "relations": []}
+{"id": "5318", "relations": [{"head_entity": {"start": 38, "stop": 46}, "tail_entity": {"start": 49, "stop": 54}, "type": "Located_In"}]}
+{"id": "4009", "relations": []}
+{"id": "2162", "relations": []}
+{"id": "1404", "relations": []}
+{"id": "2289", "relations": []}
+{"id": "4172", "relations": []}
+{"id": "4410", "relations": []}
+{"id": "3056", "relations": []}
+{"id": "1139", "relations": []}
+{"id": "1701", "relations": []}
+{"id": "1495", "relations": []}
+{"id": "4619", "relations": []}
+{"id": "2733", "relations": []}
+{"id": "2474", "relations": []}
+{"id": "789", "relations": []}
+{"id": "1133", "relations": []}

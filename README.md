@@ -174,3 +174,23 @@ Move `train.jsonl`, `test.jsonl`, `dev.jsonl` of each dataset `<dataset>` you wa
 
 E.g. move `data/export/nyt10/mare/{test,train,dev}.jsonl` 
 from this project to `data/ai4-nyt10` inside the mare project.
+
+# Literature review
+This study is based on a rigorous, reproducible literature review according to the principles of the [PRISMA]([https://www.google.com](https://www.prisma-statement.org/)) methodology. This methodology requires to document search queries used to identify potentially relevant publications, criteria for selecting/discarding papers and, finally, full-text reviews of the selected publications. The following subsections describe how the study fulfills those requirements. Detailed justifications for the decisions made can be found in the corresponding paper ("Bridging research fields: An empirical study on joint, neural relation extraction techniques").
+
+## Search queries
+The following table describes all search queries used to retrieve publications relevant to the domain of relation extraction. 
+
+| ID | Search Query                                                                                                                             |
+|----|------------------------------------------------------------------------------------------------------------------------------------------|
+| Q1 | "relation" OR "relation extraction" OR "relation classification") AND ("deep learning" OR "neural network")  AND ("tacred")              |
+| Q2 | ("relation" OR "relation extraction" OR "relation classification") AND ("deep learning" OR "neural network") AND ("docred")              |
+| Q3 | ("relation" OR "relation extraction" OR "relation classification") AND ("deep learning" OR "neural network") AND ("fewrel")              |
+| Q4 | ("relation" OR "relation extraction" OR "relation classification") AND ("deep learning" OR "neural network") AND ("NYT10")               |
+| Q5 | ("relation" OR "relation extraction" OR "relation classification") AND ("deep learning" OR "neural network") AND ("SemEval-2010 Task 8") |
+
+The term *relation extraction* raises two issues:
+1. It is a rather broad term and we can have more relevant search results when adding the name of datasets frequently used for evaluating relation extraction approaches (e.g. NYT10). Since the study considers deep learning approaches only, we add the terms "deep learning" and "neural network", too. 
+2. It is also an ambigous term, since it is often mixed up with the term *relation classification*. However, relation classification in its original sense means classifying already identified spans of text instead of also detecting those spans like it is done in relation extraction. 
+
+The queries were run on 03/25/2022. More recent relevant publications can be retrieved by reusing the search queries above and setting a time restriction later than 03/25/2022.

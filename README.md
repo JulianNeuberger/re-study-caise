@@ -174,3 +174,38 @@ Move `train.jsonl`, `test.jsonl`, `dev.jsonl` of each dataset `<dataset>` you wa
 
 E.g. move `data/export/nyt10/mare/{test,train,dev}.jsonl` 
 from this project to `data/ai4-nyt10` inside the mare project.
+
+# Literature review
+This study is based on a rigorous, reproducible literature review according to the principles of the [PRISMA]([https://www.google.com](https://www.prisma-statement.org/)) methodology. This methodology requires to document search queries used to identify potentially relevant publications, criteria for selecting/discarding papers and, finally, full-text reviews of the selected publications. The following subsections describe how the study fulfills those requirements. Detailed justifications for the decisions made can be found in the corresponding paper ("Bridging research fields: An empirical study on joint, neural relation extraction techniques").
+
+## Search queries
+The following table describes all search queries used to retrieve publications relevant to the domain of relation extraction. The queries were used in Scpous and Google Scholar. Since Google Scholar limits the number of retrievable results for each query to a maximum of 1000 results, we split the queries to return fewer than 1000 results and then combined the result sets. All queries were applied to title and full text.
+
+| ID | Search Query                                                                                                                             |
+|----|------------------------------------------------------------------------------------------------------------------------------------------|
+| Q1 | "relation" OR "relation extraction" OR "relation classification") AND ("deep learning" OR "neural network")  AND ("tacred")              |
+| Q2 | ("relation" OR "relation extraction" OR "relation classification") AND ("deep learning" OR "neural network") AND ("docred")              |
+| Q3 | ("relation" OR "relation extraction" OR "relation classification") AND ("deep learning" OR "neural network") AND ("fewrel")              |
+| Q4 | ("relation" OR "relation extraction" OR "relation classification") AND ("deep learning" OR "neural network") AND ("NYT10")               |
+| Q5 | ("relation" OR "relation extraction" OR "relation classification") AND ("deep learning" OR "neural network") AND ("SemEval-2010 Task 8") |
+
+The term *relation extraction* raises two issues:
+1. It is a rather broad term. 
+2. It is also an ambigous term, since it is often mixed up with the term *relation classification*. 
+
+This is how the queries above handle these issues. To handle the ambiguity we accept both terms *relation classification* and *relation extraction*. To avoid a too specific focus, we also accept the keyword "relation" without any additions. Since we are only interested in deep learning approaches, each query contains the keywords "deep learning" or "neural network". The third AND clause deals with the most common datasets used in NLP research to evaluate relation extraction approaches. The idea behind including dataset names in the query is to assume that almost every reputable approach is evaluated on at least one of these common datasets. Therefore, a large number of articles that do not contain an evaluation (e.g. surveys and literature reviews) are filtered out directly. Moreover, this is a sure indication that an article proposes relation extraction for natural text, rather than relation extraction approaches from other research fields, such as time series analysis. It is worth noting that without the names of the datasets, the keywords would be too broad, yielding approximately 13,000 results. Note that we do not use keywords such end2end or jointly in any query, as these terms are not used consistently in the literature. Therefore, we are likely to accept a significant number of approaches that are not end2end, which must then be manually filtered out.
+
+The queries were run on 03/25/2022, so approaches after that date are not included in this study. To reduce the number of articles to a manageable level, we automatically applied an impact filter that expects a citation rate of one citation per year for older approaches. Approaches published in 2020 or later do not have to meet this criterion due to the short time span since publication of the corresponding articles. We chose not to use a stronger threshold or a peer-review criterion, because we aim to provide a complete and very up-to-date overview of the current state of research. Applying the citation criterion to all results or excluding preprints would therefore lead to the exclusion of very recent work. Overall, after eliminating duplicates, we are left with *1845* results remain. For validation, we checked whether the result included all articles found by the authors in a previous manual search (*41* articles). In this way, two additional articles were identified, so that the retrieval stage yielded *1847* results. We did not use a snowballing strategy because the search queries used are broad enough to cover most articles.
+
+## Filtering
+PRISMA requires to define a set of EXCLUSION criteria used to discard publications that are contained in the results of the search queries but are still considered to be irrelevant to the research focus. We used the following exclusion criteria:
+* EXCL 1: The article is not written in English. 
+* EXCL 2: The paper does not present a new relation extraction approach. 
+* EXCL 3 (English): The approach does not handle English text input.
+* EXCL 4 (Neural): It is not a deep learning approach.
+* EXCL 5 (Open Source): Code is not publicly available.
+* EXCL 6 (Jointly trained models): The approach does not train the extraction of entities and relations jointly. 
+* EXCL 7 (No domain-specific knowledge base): The approach uses a (domain-specific) knowledge base.
+
+## Manual review
+After manually reviewing title and abstract of all identified papers, there is still a subset not relevant to the research focus. This is the case if title and abstract are rather vague requiring a detailed review based on the papers' full texts.

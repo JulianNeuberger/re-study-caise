@@ -492,9 +492,19 @@ def plot_binned_f1_scores(data: BinnedPlottingData, y_label: str, name: str, hue
     if f1_type is not None:
         data = data[data['f1-type'] == f1_type]
 
-    plt.figure()
-    seaborn.lineplot(x='bin_value', y='f1', hue='approach', data=data)
-    seaborn.scatterplot(x='bin_value', y='f1', hue='approach', size='bin_count', data=data, legend=False)
+    f, axs = plt.subplots(2, 1, figsize=(8, 6), sharex=True, gridspec_kw=dict(height_ratios=[0.5, 3]))
+
+    seaborn.lineplot(x='bin_value', y='f1', hue='approach', data=data, ax=axs[1])
+    seaborn.scatterplot(x='bin_value', y='f1', hue='approach', size='bin_count', data=data, legend=False, ax=axs[1])
+
+    bar_data = data[data['approach'] == 'Two']
+    if len(bar_data.index) > 1:
+        bar_width = bar_data['bin_value'].sort_values().iloc[1] - bar_data['bin_value'].sort_values().iloc[0]
+    else:
+        bar_width = .8
+    axs[0].bar(x=bar_data['bin_value'], height=bar_data['bin_count'], width=bar_width)
+    axs[0].set_yscale('log')
+    axs[0].set_ylim(bottom=1)
 
     save_plot(name, 'figures')
 
@@ -524,8 +534,7 @@ def plot_f1_scores_by_relation_variability(data: VariabilityPlottingData, y_labe
         regplot = seaborn.jointplot(x='variability', y='f1', data=data_by_approach, kind='reg')
         phantom, = regplot.ax_joint.plot([], [], linestyle='', alpha=0)
         regplot.ax_joint.legend([phantom], [f'r={r:.4f}, p={p:.4f}'])
-        #seaborn.regplot(x='variability', y='f1', data=data_by_approach)
-
+        # seaborn.regplot(x='variability', y='f1', data=data_by_approach)
 
         save_plot(f'{name}_{approach}', 'figures')
         plt.close()
@@ -713,18 +722,19 @@ def generate_plotting_data(data: typing.Dict, f1_types: typing.Dict[str, str], m
 def generate_binned_samples_plotting_data(data: typing.Dict[str, typing.Dict[str, typing.Dict]], f1_type: str,
                                           matcher: metrics.BaseMatcher,
                                           bin_predicate: typing.Callable[[binning.PredictionAndOriginal], float],
-                                          num_bins: typing.Callable[[typing.Iterable[model.Sample]], int]
-                                          ) -> BinnedPlottingData:
+                                          num_bins: typing.Callable[[typing.Iterable[model.Sample]], int],
+                                          cut_threshold: typing.Optional[int]) -> BinnedPlottingData:
     plotting_data = BinnedPlottingData()
     for approach_id, dataset_results in data.items():
         for dataset_id, dataset_result in dataset_results.items():
-            print(f'Generating binned plotting data for "{dataset_result["approach_name"]}" on "{dataset_result["dataset_name"]}"')
+            print(
+                f'Generating binned plotting data for "{dataset_result["approach_name"]}" on "{dataset_result["dataset_name"]}"')
             for subset in ['test', 'valid']:
                 results: typing.Iterable[metrics.LabeledSample] = dataset_result[f'{subset}_results']
                 label_list = list(get_label_set(results))
                 originals: typing.Iterable[model.Sample] = dataset_result[f'{subset}_original'].samples
                 samples = zip(results, originals)
-                binned_samples, bin_edges = binning.bin_predictions_by(samples, bin_predicate, num_bins(originals))
+                binned_samples, bin_edges = binning.bin_predictions_by(samples, bin_predicate, num_bins(originals), cut_threshold)
                 for bin_id, samples in binned_samples.items():
                     results = [s[0] for s in samples]
                     score = metrics.calculate_f1(results, matcher, f1_type)
@@ -756,19 +766,22 @@ def generate_variability_plotting_data(data: typing.Dict[str, typing.Dict[str, t
     plotting_data = VariabilityPlottingData()
     for approach_id, dataset_results in data.items():
         for dataset_id, dataset_result in dataset_results.items():
-            print(f'Generating variability plotting data for "{dataset_result["approach_name"]}" on "{dataset_result["dataset_name"]}"')
+            print(
+                f'Generating variability plotting data for "{dataset_result["approach_name"]}" on "{dataset_result["dataset_name"]}"')
             for subset in ['test', 'valid']:
                 original = dataset_result[f'{subset}_original']
                 variability_by_relation_type = get_variability(original)
                 subset_results: typing.Iterable[metrics.LabeledSample] = dataset_result[f'{subset}_results']
-                results_by_relation_type: typing.Dict[str, typing.List[metrics.LabeledSample]] = collections.defaultdict(list)
+                results_by_relation_type: typing.Dict[
+                    str, typing.List[metrics.LabeledSample]] = collections.defaultdict(list)
                 for sample in subset_results:
                     if len(sample.labels) == 0:
                         continue
                     try:
                         max_variability_relation = max(sample.labels, key=lambda x: variability_by_relation_type[x.tag])
                     except KeyError as e:
-                        raise KeyError(f'Unknown relation type "{e.args[0]}" in sample with id {sample.sample_id}, known relations are {list(variability_by_relation_type.keys())}')
+                        raise KeyError(
+                            f'Unknown relation type "{e.args[0]}" in sample with id {sample.sample_id}, known relations are {list(variability_by_relation_type.keys())}')
                     results_by_relation_type[max_variability_relation.tag].append(sample)
                 for relation_type, samples in results_by_relation_type.items():
                     score = metrics.calculate_f1(samples, matcher, f1_type)
@@ -925,13 +938,12 @@ if __name__ == '__main__':
     plot_f1_scores(data=entity_plotting_data, hue='dataset',
                    name=f'entity-catplot-combined', y_label='F1 score', markers=default_markers)
 
-
-
     binned_plotting_data = generate_binned_samples_plotting_data(parsed_results,
                                                                  'micro',
                                                                  metrics.ExactRelationMatcher(),
                                                                  lambda x: len(x[1].tokens),
-                                                                 num_bins=lambda _: 5)
+                                                                 num_bins=lambda _: 15,
+                                                                 cut_threshold=25)
     plot_binned_f1_scores(data=binned_plotting_data, y_label='F1 Score', name=f'binned_length_fewrel',
                           hue='approach', markers=default_markers, eval_type='test', dataset='FewRel')
     plot_binned_f1_scores(data=binned_plotting_data, y_label='F1 Score', name=f'binned_length_conll04',
@@ -946,7 +958,8 @@ if __name__ == '__main__':
                                                                  metrics.ExactRelationMatcher(),
                                                                  lambda x: len(x[1].relations),
                                                                  num_bins=lambda original_samples: max(
-                                                                     [len(x.relations) for x in original_samples]))
+                                                                     [len(x.relations) for x in original_samples]),
+                                                                 cut_threshold=None)
     plot_binned_f1_scores(data=binned_plotting_data, y_label='F1 Score', name=f'binned_relations_fewrel',
                           hue='approach', markers=default_markers, eval_type='test', dataset='FewRel')
     plot_binned_f1_scores(data=binned_plotting_data, y_label='F1 Score', name=f'binned_relations_conll04',
@@ -959,8 +972,9 @@ if __name__ == '__main__':
     binned_plotting_data = generate_binned_samples_plotting_data(parsed_results,
                                                                  'micro',
                                                                  metrics.ExactRelationMatcher(),
-                                                                 lambda x: get_token_distance(x[1], max),
-                                                                 num_bins=lambda _: 5)
+                                                                 lambda x: get_token_distance(x[1], max, mode='token'),
+                                                                 num_bins=lambda _: 15,
+                                                                 cut_threshold=25)
     plot_binned_f1_scores(data=binned_plotting_data, y_label='F1 Score', name=f'binned_distance_fewrel',
                           hue='approach', markers=default_markers, eval_type='test', dataset='FewRel')
     plot_binned_f1_scores(data=binned_plotting_data, y_label='F1 Score', name=f'binned_distance_conll04',
@@ -969,7 +983,6 @@ if __name__ == '__main__':
                           hue='approach', markers=default_markers, eval_type='test', dataset='NYT10')
     plot_binned_f1_scores(data=binned_plotting_data, y_label='F1 Score', name=f'binned_distance_semeval',
                           hue='approach', markers=default_markers, eval_type='test', dataset='Semeval')
-
 
     variability_plotting_data = generate_variability_plotting_data(parsed_results, 'micro',
                                                                    metrics.ExactRelationMatcher())

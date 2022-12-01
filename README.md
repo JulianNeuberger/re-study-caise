@@ -227,3 +227,139 @@ Our experiments for approaches selected via our systematic Literature Review fol
 * Stage 6: Based on the predictions produced we measure several scores for each approach (Macro F1, Micro F1 in two versions).
 
 ![Pipeline showing our experimental design.](figures/Experiment_Pipeline.png)
+
+## Additional experimental results
+
+### Overview of model performance
+The following plots show F1 scores in all three variants (see our paper for details)
+on all datasets. This helps to get an understanding of general model performance.
+
+**Test data** 
+
+As shown in our paper
+
+![F1 scores for al l models and datasets on test data](figures/catplot-test.png)
+
+**Validation data** 
+
+Approaches generally use validation data to select the top performing configuration,
+which is why scores tend to be higher than on test data.
+
+![F1 scores for all models and datasets on validation data](figures/catplot-valid.png)
+
+### Effects of sample length on performance
+* Dataset NYT 10, as shown in our paper. We don't visualize bins for very long samples, 
+  as they contain only a small number of samples. This results in very high variability 
+  of metric values (c.f. [Law of small numbers](https://en.wikipedia.org/wiki/Faulty_generalization#Hasty_generalization)).  
+  ![NYT10](figures/binned_length_nyt10.png)
+* Dataset FewRel. Contrary to all other datasets, FewRel has some samples that are made up 
+  of only a few tokens. While we don't visualize bins that contain very few samples at
+  the end of the graph (e.g. samples that contain a lot of tokens), we still visualize 
+  those early bins. We can clearly see the effects of the law of small numbers, as the 
+  performance jumps around a lot. Furthermore, the range of number of tokens per sample is
+  quite small (~15-~35), resulting in a less pronounced downwards trend compared to other
+  datasets.  
+  ![FewRel](figures/binned_length_fewrel.png)
+* Dataset CoNLL04.  
+  ![CoNLL04](figures/binned_length_conll04.png)
+* Dataset SemEval.  
+  ![SemEval](figures/binned_length_semeval.png)
+
+### Effects of distance between relation arguments
+* Dataset NYT 10, as shown in our paper. Note, that the distance between relation 
+  arguments is correlated with the length of a sample, which is why trends are similar.  
+  ![NYT10](figures/binned_distance_nyt10.png)
+* Dataset FewRel.  
+  ![FewRel](figures/binned_distance_fewrel.png)
+* Dataset ConLL04.  
+  ![CoNLL04](figures/binned_distance_conll04.png)
+* Dataset SemEval.  
+  ![SemEval](figures/binned_distance_semeval.png)
+
+### Effect of number of relations per sample on performance
+The number of relations per sample has only a minor detrimental effect on performance.
+Only MARE seems to struggle with additional relations per sample. We did not show this  
+analysis in our paper.
+
+* Dataset NYT 10.  
+  ![NYT10](figures/binned_relations_nyt10.png)
+* Dataset FewRel. Contains the same number of relations per sample, so no trend can be shown.  
+  ![FewRel](figures/binned_relations_fewrel.png)
+* Dataset ConLL04.  
+  ![CoNLL04](figures/binned_relations_conll04.png)
+* Dataset SemEval. Contains the same number of relations per sample, so no trend can be shown.  
+  ![SemEval](figures/binned_relations_semeval.png)
+
+### Effects of linguistic variability on performance 
+
+Please refer to our paper for a proper definition of linguistic variability. Intuitively
+linguistic performance across all arguments of a relation type makes predicting this
+type harder, which is evident, when we plot variability against the f1 score of a given 
+relation type. The correlation factor (r) determines how well a model can cope with this 
+additional challenge. The p-value shows how certain we are that this effect is not just
+random, but indeed a correlation. Following previous work, we reject that a correlation 
+exists at all, iff p>0.0005
+
+* Approach CasRel  
+  ![CasRel](figures/variability_CasRel.png)
+* Approach JointER  
+  ![JointER](figures/variability_JointER.png)
+* Approach MARE  
+  ![MARE](figures/variability_MARE.png)
+* Approach PFN  
+  ![PFN](figures/variability_PFN.png)
+* Approach RSAN  
+  ![RSAN](figures/variability_RSAN.png)
+* Approach SpERT  
+  ![SpERT](figures/variability_SpERT.png)
+* Approach Two are better than one  
+  ![Two](figures/variability_Two.png)
+
+### Confusion between relation types
+
+We can plot confusion matrices for all approaches, to show what relation types are
+mixed up in prediction. This is only feasible for a handful of types, which is why we 
+show only CoNLL04 here (5 relation types). *Note that this only shows what relations 
+are mixed up, but not if an approach fails to identify a relation, or fails predicts its 
+arguments*.
+
+* CasRel on CoNLL04 test  
+  ![CasRel on CoNLL04 test](figures/confusion/CasRel_ConLL%2004_test.png)
+* JointER on CoNLL04 test  
+  ![JointER on CoNLL04 test](figures/confusion/JointER_ConLL%2004_test.png)
+* MARE on CoNLL04 test  
+  ![MARE on CoNLL04 test](figures/confusion/MARE_ConLL%2004_test.png)
+* PFN on CoNLL04 test  
+  ![PFN on CoNLL04 test](figures/confusion/PFN_ConLL%2004_test.png)
+* RSAN on CoNLL04 test  
+  ![RSAN on CoNLL04 test](figures/confusion/RSAN_ConLL%2004_test.png)
+* SpERT on CoNLL04 test  
+  ![SpERT on CoNLL04 test](figures/confusion/SpERT_ConLL%2004_test.png)
+* Two are better than one on CoNLL04 test  
+  ![Two on CoNLL04 test](figures/confusion/Two_ConLL%2004_test.png)
+
+### Coupling between entity pos tags and relation type
+
+An intuitive explanation of why some datasets are easier to model is the coupling
+of entity pos tags, their ner tags and the possible relations between them. Perfect
+coupling between a combination of ner-tags and a relation type would theoretically
+make the task of relation *type* prediction trivial (not the task of predicting the 
+existence of a relation in the first place). A good example for this perfect coupling
+can be found in CoNLL04, where a relation between entities PEOPLE and PEOPLE is always
+KILL. 
+
+We annotated tokens of all datasets with their respective ner tags and counted the 
+number of times a relation between two entities occurs, i.e. its argument entities. 
+*Note, that we used the stanza toolkit for this task, which does not yield perfect 
+results and often times tags tokens with the ner tag UNKNOWN*.
+
+The resulting matrices are shown below for all datasets.
+
+* ConLL04  
+  ![Coupling of relation type and argument ner tags for CoNLL04](analyze/export/relation_entity_tags_conll-04.png)
+* FewRel  
+  ![Coupling of relation type and argument ner tags for FewRel](analyze/export/relation_entity_tags_fewrel.png)
+* NYT 10  
+  ![Coupling of relation type and argument ner tags for NYT 10](analyze/export/relation_entity_tags_nyt10.png)
+* SemEval 2010 task 8  
+  ![Coupling of relation type and argument ner tags for SemEval](analyze/export/relation_entity_tags_semeval-2010-task-8.png)

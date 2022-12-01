@@ -278,58 +278,51 @@ def slugify(value, allow_unicode=False):
 
 if __name__ == '__main__':
     print('Loading data...')
-    # nyt_data = [
-    #     importer.JsonLinesImporter().load(['../data/export/nyt10/jsonl/train.json'], name='NYT10 (train)'),
-    #     importer.JsonLinesImporter().load(['../data/export/nyt10/jsonl/valid.json'], name='NYT10 (dev/valid)'),
-    #     importer.JsonLinesImporter().load(['../data/export/nyt10/jsonl/test.json'], name='NYT10 (test)'),
-    # ]
-    # semeval_data = [
-    #     importer.JsonLinesImporter().load(['../data/export/semeval/jsonl/train.json'], name='Semeval (train)'),
-    #     importer.JsonLinesImporter().load(['../data/export/semeval/jsonl/valid.json'], name='Semeval (dev/valid)'),
-    #     importer.JsonLinesImporter().load(['../data/export/semeval/jsonl/test.json'], name='Semeval (test)'),
-    # ]
-    # conll_data = [
-    #     importer.JsonLinesImporter().load(['../data/export/conll04/jsonl/train.json'], name='ConLL 04 (train)'),
-    #     importer.JsonLinesImporter().load(['../data/export/conll04/jsonl/valid.json'], name='ConLL 04 (dev/valid)'),
-    #     importer.JsonLinesImporter().load(['../data/export/conll04/jsonl/test.json'], name='ConLL 04 (test)'),
-    # ]
-    # fewrel_data = [
-    #     importer.JsonLinesImporter().load(['../data/export/fewrel/jsonl/train.json'], name='FewRel (train)'),
-    #     importer.JsonLinesImporter().load(['../data/export/fewrel/jsonl/valid.json'], name='FewRel (dev/valid)'),
-    #     importer.JsonLinesImporter().load(['../data/export/fewrel/jsonl/test.json'], name='FewRel (test)'),
-    # ]
-
-    ai4_data = [
-        importer.JsonLinesImporter().load(['../data/export/ai4/jsonl/ai4.jsonl'], name='AI4')
+    nyt_data = [
+        importer.JsonLinesImporter().load(['../data/export/nyt10/jsonl/train.json'], name='NYT10 (train)'),
+        importer.JsonLinesImporter().load(['../data/export/nyt10/jsonl/valid.json'], name='NYT10 (dev/valid)'),
+        importer.JsonLinesImporter().load(['../data/export/nyt10/jsonl/test.json'], name='NYT10 (test)'),
+    ]
+    semeval_data = [
+        importer.JsonLinesImporter().load(['../data/export/semeval/jsonl/train.json'], name='Semeval (train)'),
+        importer.JsonLinesImporter().load(['../data/export/semeval/jsonl/valid.json'], name='Semeval (dev/valid)'),
+        importer.JsonLinesImporter().load(['../data/export/semeval/jsonl/test.json'], name='Semeval (test)'),
+    ]
+    conll_data = [
+        importer.JsonLinesImporter().load(['../data/export/conll04/jsonl/train.json'], name='ConLL 04 (train)'),
+        importer.JsonLinesImporter().load(['../data/export/conll04/jsonl/valid.json'], name='ConLL 04 (dev/valid)'),
+        importer.JsonLinesImporter().load(['../data/export/conll04/jsonl/test.json'], name='ConLL 04 (test)'),
+    ]
+    fewrel_data = [
+        importer.JsonLinesImporter().load(['../data/export/fewrel/jsonl/train.json'], name='FewRel (train)'),
+        importer.JsonLinesImporter().load(['../data/export/fewrel/jsonl/valid.json'], name='FewRel (dev/valid)'),
+        importer.JsonLinesImporter().load(['../data/export/fewrel/jsonl/test.json'], name='FewRel (test)'),
     ]
 
-    # grouped_nyt_data = group_datasets(group_name='NYT10', datasets=nyt_data)
-    # grouped_semeval_data = group_datasets(group_name='SemEval 2010 (task 8)', datasets=semeval_data)
-    # grouped_conll_data = group_datasets(group_name='ConLL 04', datasets=conll_data)
-    # grouped_fewrel_data = group_datasets(group_name='FewRel', datasets=fewrel_data)
-    grouped_ai4_data = group_datasets(group_name='AI 4', datasets=ai4_data)
+    grouped_nyt_data = group_datasets(group_name='NYT10', datasets=nyt_data)
+    grouped_semeval_data = group_datasets(group_name='SemEval 2010 (task 8)', datasets=semeval_data)
+    grouped_conll_data = group_datasets(group_name='ConLL 04', datasets=conll_data)
+    grouped_fewrel_data = group_datasets(group_name='FewRel', datasets=fewrel_data)
 
-    #data = [grouped_nyt_data, grouped_semeval_data, grouped_conll_data, grouped_fewrel_data, grouped_ai4_data]
-
-    data = ai4_data
+    data = [grouped_nyt_data, grouped_semeval_data, grouped_conll_data, grouped_fewrel_data]
 
     dataset_names = {d.name for d in data}
     assert len(dataset_names) == len(data), f'Dataset names have to be unique for analysis purposes.'
 
     palette = sns.color_palette()
 
-    # print_tabular(
-    #     datasets=nyt_data + [grouped_nyt_data] + semeval_data + [grouped_semeval_data] + conll_data + [grouped_conll_data] + fewrel_data + [grouped_fewrel_data] + ai4_data,
-    #     steps=[
-    #         structure.NumSamplesAnalysisStep(),
-    #         structure.RelationTypesAnalysisStep(),
-    #         structure.RelationDistanceAnalysisStep(),
-    #         structure.VocabSizeAnalysisStep(),
-    #         structure.NumEntityAnalysisStep()
-    #     ],
-    #     table_fmt='latex_raw',
-    #     save_path=os.path.join('export', 'detailed_dataset_overview.tex')
-    # )
+    print_tabular(
+        datasets=nyt_data + [grouped_nyt_data] + semeval_data + [grouped_semeval_data] + conll_data + [grouped_conll_data] + fewrel_data + [grouped_fewrel_data],
+        steps=[
+            structure.NumSamplesAnalysisStep(),
+            structure.RelationTypesAnalysisStep(),
+            structure.RelationDistanceAnalysisStep(),
+            structure.VocabSizeAnalysisStep(),
+            structure.NumEntityAnalysisStep()
+        ],
+        table_fmt='latex_raw',
+        save_path=os.path.join('export', 'detailed_dataset_overview.tex')
+    )
 
     # Number of examples per dataset
     print_bar_plot_per_dataset(
@@ -382,164 +375,128 @@ if __name__ == '__main__':
     )
 
     # Relation distribution small version
-    # fig, ax = plt.subplots(ncols=len(data), figsize=(18.0, 4.8), gridspec_kw={'width_ratios': [24, 9, 5, 71, 1]})
-    # fig.supylabel('number of relation types')
-    # for i, d in enumerate(data):
-    #     print_bar_plot_per_step(
-    #         dataset=d,
-    #         step=structure.RelationTypesAnalysisStep(return_relation_count=['all']),
-    #         get_cols=lambda r: cols_from_relation_types(analysis_step_by_name(r, 'relation_types').value),
-    #         on_axes=ax[i],
-    #         x_label=d.name,
-    #         should_finalize=False,
-    #         show_x_ticks=False,
-    #         color=palette[0]
-    #     )
-    # finalize_figure(save_paths=[os.path.join('export', f'relation_distributions_small.png'),
-    #                             os.path.join('export', f'relation_distributions_small.pdf')])
-    #
-    # # Relation distribution large version
-    # fig = plt.figure(figsize=(18.0, 14.0))
-    # gs = fig.add_gridspec(3, 4)
-    # axs = [
-    #     fig.add_subplot(gs[0, :2]),
-    #     fig.add_subplot(gs[0, 2]),
-    #     fig.add_subplot(gs[0, 3]),
-    #
-    #     fig.add_subplot(gs[1, :]),
-    #
-    #     fig.add_subplot(gs[2, :])
-    # ]
+    fig, ax = plt.subplots(ncols=len(data), figsize=(18.0, 4.8), gridspec_kw={'width_ratios': [24, 9, 5, 71]})
+    fig.supylabel('number of relation types')
+    for i, d in enumerate(data):
+        print_bar_plot_per_step(
+            dataset=d,
+            step=structure.RelationTypesAnalysisStep(return_relation_count=['all']),
+            get_cols=lambda r: cols_from_relation_types(analysis_step_by_name(r, 'relation_types').value),
+            on_axes=ax[i],
+            x_label=d.name,
+            should_finalize=False,
+            show_x_ticks=False,
+            color=palette[0]
+        )
+    finalize_figure(save_paths=[os.path.join('export', f'relation_distributions_small.png'),
+                                os.path.join('export', f'relation_distributions_small.pdf')])
 
-    # # fig, ax = plt.subplots(nrows=2, ncols=len(data) - 1, figsize=(18.0, 6.8), gridspec_kw={'width_ratios': [24, 9, 5, 71]})
-    # for i, d in enumerate(data):
-    #     print_bar_plot_per_step(
-    #         dataset=d,
-    #         step=structure.RelationTypesAnalysisStep(return_relation_count=['all']),
-    #         get_cols=lambda r: cols_from_relation_types(analysis_step_by_name(r, 'relation_types').value),
-    #         on_axes=axs[i],
-    #         should_finalize=False,
-    #         color=palette[0]
-    #     )
-    # finalize_figure(save_paths=[os.path.join('export', f'relation_distributions.png'),
-    #                             os.path.join('export', f'relation_distributions.pdf')])
+    # Relation distribution large version
+    fig = plt.figure(figsize=(18.0, 14.0))
+    gs = fig.add_gridspec(2, 4)
+    axs = [
+        fig.add_subplot(gs[0, :2]),
+        fig.add_subplot(gs[0, 2]),
+        fig.add_subplot(gs[0, 3]),
+
+        fig.add_subplot(gs[1, :])
+    ]
+
+    # fig, ax = plt.subplots(nrows=2, ncols=len(data) - 1, figsize=(18.0, 6.8), gridspec_kw={'width_ratios': [24, 9, 5, 71]})
+    for i, d in enumerate(data):
+        print_bar_plot_per_step(
+            dataset=d,
+            step=structure.RelationTypesAnalysisStep(return_relation_count=['all']),
+            get_cols=lambda r: cols_from_relation_types(analysis_step_by_name(r, 'relation_types').value),
+            on_axes=axs[i],
+            should_finalize=False,
+            color=palette[0]
+        )
+    finalize_figure(save_paths=[os.path.join('export', f'relation_distributions.png'),
+                                os.path.join('export', f'relation_distributions.pdf')])
 
     # relation distribution single versions
-    # fig_sizes = [(12.8, 6.8), (4.5, 4.0), (3.0, 3.8), (25.6, 6.8)]
-    # for i, d in enumerate(data):
-    #     plt.figure(figsize=fig_sizes[i])
-    #     print_bar_plot_per_step(
-    #         dataset=d,
-    #         step=structure.RelationTypesAnalysisStep(return_relation_count=['all']),
-    #         get_cols=lambda r: cols_from_relation_types(analysis_step_by_name(r, 'relation_types').value),
-    #         should_finalize=False,
-    #         on_axes=plt.gca(),
-    #         color=palette[0]
-    #     )
-    #     finalize_figure(save_paths=[os.path.join('export', f'relation_distributions_{slugify(d.name)}.png'),
-    #                                 os.path.join('export', f'relation_distributions_{slugify(d.name)}.pdf')])
-    #
-    # # Share of negative examples
-    # for d in data:
-    #     print_bar_plot_per_step(
-    #         dataset=d,
-    #         step=structure.NegativeExamplesAnalysisStep(),
-    #         get_cols=lambda r: (['no relations', 'at least one relation'],
-    #                             [analysis_step_by_name(r, 'negative_examples').value,
-    #                              analysis_step_by_name(r, 'positive_examples').value]),
-    #         x_label='',
-    #         y_label='number of examples',
-    #         save_paths=[os.path.join('export', f'negative_examples_{slugify(d.name)}.png'),
-    #                     os.path.join('export', f'negative_examples_{slugify(d.name)}.pdf')]
-    #     )
-    #
-    # for d in data:
-    #     print_bar_plot_per_step(
-    #         dataset=d,
-    #         step=structure.NumRelationsPerSampleAnalysisStep(),
-    #         get_cols=lambda r: cols_from_num_relations_per_sample(analysis_step_by_name(r, 'num_relations_per_sample').value),
-    #         x_label='relations per sample',
-    #         y_label='number of samples',
-    #         save_paths=[os.path.join('export', f'num_relations_per_sample_{slugify(d.name)}.png'),
-    #                     os.path.join('export', f'num_relations_per_sample_{slugify(d.name)}.pdf')]
-    #     )
-    #
-    # # heatmap for ner tag co-occurrence in relation head and tails
-    # print_heatmap_per_step(
-    #     dataset=grouped_conll_data,
-    #     step=structure.RelationEntityTagAnalysisStep(),
-    #     get_dataframe=lambda r: dataframe_from_dicts(analysis_step_by_name(r, 'relation_entity_tags').value, threshold=0.0),
-    #     fig_size=(10, 10),
-    #     x_label='',
-    #     y_label='',
-    #     save_paths=[os.path.join('export', f'relation_entity_tags_{slugify(grouped_conll_data.name)}.png'),
-    #                 os.path.join('export', f'relation_entity_tags_{slugify(grouped_conll_data.name)}.pdf')]
-    # )
-    #
-    # print_heatmap_per_step(
-    #     dataset=grouped_semeval_data,
-    #     step=structure.RelationEntityTagAnalysisStep(),
-    #     get_dataframe=lambda r: dataframe_from_dicts(analysis_step_by_name(r, 'relation_entity_tags').value, threshold=0.0),
-    #     fig_size=(10, 18),
-    #     x_label='',
-    #     y_label='',
-    #     save_paths=[os.path.join('export', f'relation_entity_tags_{slugify(grouped_semeval_data.name)}.png'),
-    #                os.path.join('export', f'relation_entity_tags_{slugify(grouped_semeval_data.name)}.pdf')]
-    # )
-    #
-    # print_heatmap_per_step(
-    #     dataset=grouped_nyt_data,
-    #     step=structure.RelationEntityTagAnalysisStep(),
-    #     get_dataframe=lambda r: dataframe_from_dicts(analysis_step_by_name(r, 'relation_entity_tags').value, threshold=20.0),
-    #     fig_size=(20, 20),
-    #     x_label='',
-    #     y_label='',
-    #     save_paths=[os.path.join('export', f'relation_entity_tags_{slugify(grouped_nyt_data.name)}.png'),
-    #                os.path.join('export', f'relation_entity_tags_{slugify(grouped_nyt_data.name)}.pdf')]
-    # )
-    #
-    # print_heatmap_per_step(
-    #     dataset=grouped_fewrel_data,
-    #     step=structure.RelationEntityTagAnalysisStep(),
-    #     get_dataframe=lambda r: dataframe_from_dicts(analysis_step_by_name(r, 'relation_entity_tags').value, threshold=20.0),
-    #     fig_size=(20, 20),
-    #     x_label='',
-    #     y_label='',
-    #     save_paths=[os.path.join('export', f'relation_entity_tags_{slugify(grouped_fewrel_data.name)}.png'),
-    #                os.path.join('export', f'relation_entity_tags_{slugify(grouped_fewrel_data.name)}.pdf')]
-    # )
+    fig_sizes = [(12.8, 6.8), (4.5, 4.0), (3.0, 3.8), (25.6, 6.8)]
+    for i, d in enumerate(data):
+        plt.figure(figsize=fig_sizes[i])
+        print_bar_plot_per_step(
+            dataset=d,
+            step=structure.RelationTypesAnalysisStep(return_relation_count=['all']),
+            get_cols=lambda r: cols_from_relation_types(analysis_step_by_name(r, 'relation_types').value),
+            should_finalize=False,
+            on_axes=plt.gca(),
+            color=palette[0]
+        )
+        finalize_figure(save_paths=[os.path.join('export', f'relation_distributions_{slugify(d.name)}.png'),
+                                    os.path.join('export', f'relation_distributions_{slugify(d.name)}.pdf')])
 
+    # Share of negative examples
+    for d in data:
+        print_bar_plot_per_step(
+            dataset=d,
+            step=structure.NegativeExamplesAnalysisStep(),
+            get_cols=lambda r: (['no relations', 'at least one relation'],
+                                [analysis_step_by_name(r, 'negative_examples').value,
+                                 analysis_step_by_name(r, 'positive_examples').value]),
+            x_label='',
+            y_label='number of examples',
+            save_paths=[os.path.join('export', f'negative_examples_{slugify(d.name)}.png'),
+                        os.path.join('export', f'negative_examples_{slugify(d.name)}.pdf')]
+        )
+
+    for d in data:
+        print_bar_plot_per_step(
+            dataset=d,
+            step=structure.NumRelationsPerSampleAnalysisStep(),
+            get_cols=lambda r: cols_from_num_relations_per_sample(analysis_step_by_name(r, 'num_relations_per_sample').value),
+            x_label='relations per sample',
+            y_label='number of samples',
+            save_paths=[os.path.join('export', f'num_relations_per_sample_{slugify(d.name)}.png'),
+                        os.path.join('export', f'num_relations_per_sample_{slugify(d.name)}.pdf')]
+        )
+
+    # heatmap for ner tag co-occurrence in relation head and tails
     print_heatmap_per_step(
-        dataset=grouped_ai4_data,
-        step=entity.PosTagsAnalysisStep(),
-        get_dataframe=lambda r: dataframe_from_dicts(analysis_step_by_name(r, 'entity_pos_tags').value, row_threshold=10.0),
-        fig_size=(10, 25),
+        dataset=grouped_conll_data,
+        step=structure.RelationEntityTagAnalysisStep(),
+        get_dataframe=lambda r: dataframe_from_dicts(analysis_step_by_name(r, 'relation_entity_tags').value, row_threshold=0.0),
+        fig_size=(10, 10),
         x_label='',
         y_label='',
-        save_paths=[os.path.join('export', f'entity_pos_tags_{slugify(grouped_ai4_data.name)}.png'),
-                    os.path.join('export', f'entity_pos_tags_{slugify(grouped_ai4_data.name)}.pdf')]
+        save_paths=[os.path.join('export', f'relation_entity_tags_{slugify(grouped_conll_data.name)}.png'),
+                    os.path.join('export', f'relation_entity_tags_{slugify(grouped_conll_data.name)}.pdf')]
     )
 
     print_heatmap_per_step(
-        dataset=grouped_ai4_data,
-        step=entity.PosTagsAnalysisStep(),
-        get_dataframe=lambda r: dataframe_from_dicts(analysis_step_by_name(r, 'entity_pos_tags_w_context').value, row_threshold=10.0),
-        fig_size=(10, 25),
+        dataset=grouped_semeval_data,
+        step=structure.RelationEntityTagAnalysisStep(),
+        get_dataframe=lambda r: dataframe_from_dicts(analysis_step_by_name(r, 'relation_entity_tags').value, row_threshold=0.0),
+        fig_size=(10, 18),
         x_label='',
         y_label='',
-        save_paths=[os.path.join('export', f'entity_pos_tags_c1_{slugify(grouped_ai4_data.name)}.png'),
-                    os.path.join('export', f'entity_pos_tags_c1_{slugify(grouped_ai4_data.name)}.pdf')]
+        save_paths=[os.path.join('export', f'relation_entity_tags_{slugify(grouped_semeval_data.name)}.png'),
+                   os.path.join('export', f'relation_entity_tags_{slugify(grouped_semeval_data.name)}.pdf')]
     )
 
     print_heatmap_per_step(
-        dataset=grouped_ai4_data,
-        step=entity.PosTagsAnalysisStep(),
-        get_dataframe=lambda r: dataframe_from_dicts(analysis_step_by_name(r, 'different_tagging').value,
-                                                     row_threshold=0.0),
-        fig_size=(15, 25),
+        dataset=grouped_nyt_data,
+        step=structure.RelationEntityTagAnalysisStep(),
+        get_dataframe=lambda r: dataframe_from_dicts(analysis_step_by_name(r, 'relation_entity_tags').value, row_threshold=20.0),
+        fig_size=(20, 20),
         x_label='',
         y_label='',
-        annotation_format='.1%',
-        save_paths=[os.path.join('export', f'entity_pos_tags_diffs_{slugify(grouped_ai4_data.name)}.png'),
-                    os.path.join('export', f'entity_pos_tags_diffs_{slugify(grouped_ai4_data.name)}.pdf')]
+        save_paths=[os.path.join('export', f'relation_entity_tags_{slugify(grouped_nyt_data.name)}.png'),
+                   os.path.join('export', f'relation_entity_tags_{slugify(grouped_nyt_data.name)}.pdf')]
     )
+
+    print_heatmap_per_step(
+        dataset=grouped_fewrel_data,
+        step=structure.RelationEntityTagAnalysisStep(),
+        get_dataframe=lambda r: dataframe_from_dicts(analysis_step_by_name(r, 'relation_entity_tags').value, row_threshold=20.0),
+        fig_size=(20, 20),
+        x_label='',
+        y_label='',
+        save_paths=[os.path.join('export', f'relation_entity_tags_{slugify(grouped_fewrel_data.name)}.png'),
+                   os.path.join('export', f'relation_entity_tags_{slugify(grouped_fewrel_data.name)}.pdf')]
+    )
+

@@ -1,4 +1,4 @@
-# Anonymous Relation Extraction Comparative Study 
+# Study on Joint Entity and Relation Extraction 
 
 ![Results for a suite of relation extraction methods run on a selection of datasets.](figures/catplot-combined.png)
 
@@ -214,3 +214,16 @@ PRISMA requires to define a set of EXCLUSION criteria used to discard publicatio
 
 ## Manual review
 After manually reviewing title and abstract of all identified papers, there is still a subset not relevant to the research focus. This is the case if title and abstract are rather vague requiring a detailed review based on the papers' full texts.
+
+# Experiments
+In the following we provide a brief overview of our experiments that follow our intention to identify approaches that can be used "out-of-the-box" to extract both entities and relations from human-readable text across arbitrary domains.  
+## Experimental design
+Our experiments for approaches selected via our systematic Literature Review follow the procedure visualized below. Details about the respective steps can be found in our paper. The following is a short summary:
+* Stage 1: To get an idea of the approaches' transferability we apply them on diverse datasets that show different characteristics. 
+* Stage 2: Some of those datasets have to be enriched with further information (e.g. POS tags) and require tokenization.
+* Stage 3: The result of Stage 2 is stored in a stream-based JSON representation, a intermediate format we defined for easy conversion to various target formats.
+* Stage 4: From the intermediate formats we derive approach-specific representations.
+* Stage 5: We set up the experiments for all selected approaches to evaluate them on all those datasets.
+* Stage 6: Based on the predictions produced we measure several scores for each approach (Macro F1, Micro F1 in two versions).
+
+![Pipeline showing our experimental design.](figures/Experiment_Pipeline.png)
